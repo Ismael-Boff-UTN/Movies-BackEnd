@@ -24,7 +24,8 @@ const moviesController = {
     db.Movie.findByPk(req.params.id).then((movie) => {
       //console.log('---LISTO EL DETALLE');
       // console.log(movie.title);
-      res.render("moviesDetail.ejs", { movie });
+      //res.render("moviesDetail.ejs", { movie });
+      res.json({movie});
     });
   },
   new: (req, res) => {
